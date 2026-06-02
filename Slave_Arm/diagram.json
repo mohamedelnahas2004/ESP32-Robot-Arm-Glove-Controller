@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "author": "Mohamed Elnahns",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 76.8, "left": -4.76, "attrs": {} },
+    {
+      "type": "wokwi-servo",
+      "id": "servo1",
+      "top": -125.8,
+      "left": -228.6,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo2",
+      "top": -125.8,
+      "left": -132.6,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo3",
+      "top": -125.8,
+      "left": -46.2,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo4",
+      "top": -125.8,
+      "left": 40.2,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo5",
+      "top": -125.8,
+      "left": 126.6,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo6",
+      "top": -125.8,
+      "left": 213,
+      "rotate": 270,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "servo1:PWM", "esp:13", "green", [ "v0" ] ],
+    [ "servo3:PWM", "esp:14", "green", [ "v28.8", "h-163", "v163.2" ] ],
+    [ "servo2:PWM", "esp:12", "green", [ "v19.2", "h-86.2", "v192" ] ],
+    [ "servo4:PWM", "esp:27", "green", [ "v28.8", "h0.2", "v9.6", "h-240", "v144" ] ],
+    [ "servo5:PWM", "esp:26", "green", [ "v48", "h-316.6", "v124.8" ] ],
+    [ "servo6:PWM", "esp:25", "green", [ "v57.6", "h-393.4", "v105.6" ] ],
+    [ "esp:5V", "servo1:V+", "red", [ "h0" ] ],
+    [ "servo6:V+", "esp:5V", "red", [ "v278.4", "h-297.5" ] ],
+    [ "esp:5V", "servo2:V+", "red", [ "h-9.45", "v9.6", "h-144", "v-259.2", "h105.6" ] ],
+    [ "esp:5V", "servo3:V+", "red", [ "h-9.45", "v19.2", "h-153.6", "v-259.2", "h201.6" ] ],
+    [ "esp:5V", "servo4:V+", "red", [ "h0.15", "v28.8", "h124.8" ] ],
+    [ "esp:5V", "servo5:V+", "red", [ "h0.15", "v38.4", "h201.6" ] ],
+    [ "esp:GND.2", "servo6:GND", "black", [ "v-9.6", "h192" ] ],
+    [ "servo5:GND", "esp:GND.2", "black", [ "v67.2", "h-96" ] ],
+    [ "servo4:GND", "esp:GND.2", "black", [ "v0" ] ],
+    [ "esp:GND.1", "servo1:GND", "black", [ "h-172.65", "v-211.2", "h19.2" ] ],
+    [ "servo2:GND", "esp:GND.1", "black", [ "h-57.6", "v-182.4", "h-67.2", "v393.6" ] ],
+    [ "servo3:GND", "esp:GND.1", "black", [ "v9.6", "h-28.8", "v-201.6", "h-192", "v403.2" ] ]
+  ],
+  "dependencies": {}
+}
