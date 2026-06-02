@@ -53,3 +53,10 @@ typedef struct __attribute__((packed)) {
     ├── wokwi-project.txt          # Simulator Target Metadata
     └── circuit_diagram.png        # Slave Arm Wiring Diagram
 ```
+
+---
+## 5. Team
+| Name | GitHub |
+| :--- | :--- |
+| Eyad Mezed | [@EyadMzed](https://github.com/EyadMzed) |
+| Mohamed Abdel Aal | [@mohamedelnahas2004](https://github.com/mohamedelnahas2004) |
