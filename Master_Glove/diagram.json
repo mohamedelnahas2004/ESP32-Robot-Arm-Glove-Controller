@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": -4.76, "attrs": {} },
+    { "type": "wokwi-mpu6050", "id": "imu1", "top": 23.02, "left": -199.28, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -87.7, "left": -451.4, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot2", "top": 8.3, "left": -451.4, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot3", "top": 94.7, "left": -451.4, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot4", "top": 181.1, "left": -451.4, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot5", "top": 267.5, "left": -451.4, "attrs": {} },
+    {
+      "type": "wokwi-text",
+      "id": "text1",
+      "top": 28.8,
+      "left": -672,
+      "attrs": { "text": "Index" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text2",
+      "top": 115.2,
+      "left": -662.4,
+      "attrs": { "text": "Middle" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text3",
+      "top": -57.6,
+      "left": -662.4,
+      "attrs": { "text": "Thumb" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text4",
+      "top": 201.6,
+      "left": -662.4,
+      "attrs": { "text": "Ring" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text5",
+      "top": 297.6,
+      "left": -672,
+      "attrs": { "text": "Pinky" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "imu1:SDA", "esp:21", "green", [ "v-105.6", "h278.48", "v153.6" ] ],
+    [ "imu1:SCL", "esp:22", "green", [ "v-96", "h259.28", "v124.8" ] ],
+    [ "imu1:GND", "esp:GND.2", "black", [ "v-86.4", "h240.08", "v96" ] ],
+    [ "imu1:VCC", "esp:3V3", "red", [ "v-76.8", "h115.28", "v76.8" ] ],
+    [
+      "pot1:VCC",
+      "esp:3V3",
+      "red",
+      [ "v19.2", "h191.2", "v96", "h105.6", "v-134.4", "h86.4", "v67.2" ]
+    ],
+    [
+      "pot2:VCC",
+      "esp:3V3",
+      "red",
+      [ "v9.6", "h172", "v19.2", "h134.4", "v-134.4", "h67.2", "v57.6" ]
+    ],
+    [
+      "pot3:VCC",
+      "esp:3V3",
+      "red",
+      [ "v9.6", "h47.2", "v-76.8", "h115.2", "v19.2", "h153.6", "v-134.4", "h48", "v48" ]
+    ],
+    [
+      "pot4:VCC",
+      "esp:3V3",
+      "red",
+      [ "v19.2", "h56.8", "v-163.2", "h96", "v19.2", "h172.8", "v-134.4", "h28.8", "v38.4" ]
+    ],
+    [
+      "pot5:VCC",
+      "esp:3V3",
+      "red",
+      [ "v19.2", "h66.4", "v-240", "h76.8", "v19.2", "h192", "v-134.4", "h9.6", "v28.8" ]
+    ],
+    [ "pot1:GND", "esp:GND.1", "black", [ "v9.6", "h-134.4", "v432", "h537.6", "v-268.8" ] ],
+    [ "pot2:GND", "esp:GND.1", "black", [ "v9.6", "h-124.8", "v326.4", "h518.4", "v-259.2" ] ],
+    [ "pot3:GND", "esp:GND.1", "black", [ "v9.6", "h-115.2", "v230.4", "h499.2", "v-249.6" ] ],
+    [ "pot4:GND", "esp:GND.1", "black", [ "v9.6", "h-105.6", "v134.4", "h480", "v-240" ] ],
+    [ "pot5:GND", "esp:GND.1", "black", [ "v19.2", "h-96", "v28.8", "h460.8", "v-230.4" ] ],
+    [
+      "pot1:SIG",
+      "esp:34",
+      "green",
+      [ "v19.2", "h-154", "v432", "h499.2", "v-288", "h57.6", "v-76.8" ]
+    ],
+    [
+      "pot2:SIG",
+      "esp:35",
+      "green",
+      [ "v19.2", "h-163.6", "v345.6", "h499.2", "v-297.6", "h57.6", "v-9.6" ]
+    ],
+    [
+      "pot3:SIG",
+      "esp:32",
+      "green",
+      [ "v19.2", "h-173.2", "v268.8", "h499.2", "v-307.2", "h57.6", "v-48" ]
+    ],
+    [
+      "pot4:SIG",
+      "esp:33",
+      "green",
+      [ "v19.2", "h-182.8", "v192", "h499.2", "v-316.8", "h57.6", "v-38.4" ]
+    ],
+    [
+      "pot5:SIG",
+      "esp:VN",
+      "green",
+      [ "v38.4", "h-192.4", "v96", "h499.2", "v-326.4", "h57.6", "v-86.4" ]
+    ]
+  ],
+  "dependencies": {}
+}
