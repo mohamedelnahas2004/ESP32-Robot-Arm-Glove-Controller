@@ -44,10 +44,12 @@ typedef struct __attribute__((packed)) {
 │   ├── sketch.ino                 # Core Inversion-of-Control Loop (Master Code)
 │   ├── diagram.json               # Hardware Schematic Layout Profile
 │   ├── libraries.txt              # Environment Managed Dependencies
-│   └── wokwi-project.txt          # Simulator Target Metadata
+│   ├── wokwi-project.txt          # Simulator Target Metadata
+│   └── circuit_diagram.png        # Master Glove Wiring Diagram
 └── Slave_Arm/                     # Receiver Firmware Workspace
     ├── sketch.ino                 # PWM Generation Engine (Slave Code)
     ├── diagram.json               # Actuator Network Schematic Layout Profile
     ├── libraries.txt              # Environment Managed Dependencies
-    └── wokwi-project.txt          # Simulator Target Metadata
+    ├── wokwi-project.txt          # Simulator Target Metadata
+    └── circuit_diagram.png        # Slave Arm Wiring Diagram
 ```
